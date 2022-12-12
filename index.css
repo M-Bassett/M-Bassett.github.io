@@ -1,0 +1,436 @@
+
+html {
+	overflow-x: hidden;
+	padding: 0px;
+	margin: 0px
+}
+
+
+body {animation-name: backgroundColorPalette;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Karla', 'Roboto', 'Work Sans', 'Rubik Mono One', sans-serif;
+        }
+
+
+		@keyframes backgroundColorPalette {
+			0% {
+				background: #D0C6FF;
+			}
+			25% {
+				background: #BEB1FF;
+			}
+			50% {
+				background: #B3A4FF;
+			}
+			75% {
+				background: #A390FF;
+			}
+			100% {
+				background: #927CFF;
+			}
+		}
+		
+
+        .transition-fade {
+           opacity: 1;
+           transition: 500ms; 
+        }
+
+        html.is-animating .transition-fade{
+            opacity: 0;
+        }
+	
+			
+		.parent {
+			background-color: hsla(200, 100%, 20%);
+			height: 20px;
+			width: 20px;
+			border-radius: 50%;
+		}
+		
+		.child {
+			background-color: red;
+			height: 10%;
+			width: 10%;
+			border-radius: 50%;
+			position:absolute;
+			left: 100vw;
+			top: 100vh;
+			transition: all 1s ease-in-out;
+		}
+		
+		.childscreen {
+			background-color: red;
+			z-index: 0;
+			height: 120%;
+			width: 120%;
+			border-radius: 50%;
+			position:absolute;
+			left: 100vw;
+			top: 100vh;
+			transition: all 1s ease-in-out;	
+		}
+
+		.parent:hover .child {
+			transform: scale(1.2);
+		}
+		
+		.parent:active .child {
+			transform: scale(100);
+			-webkit-transition: transform 2s ease-in-out;
+		}
+
+        .empty {
+            margin: 3%;
+            position: relative;
+        }
+  
+        .first-txt {
+            position: absolute;
+            top: 17px;
+            left: 50px;
+        }
+  
+        .second-txt {
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+        }
+
+      
+        a {
+            font-family: 'Rubik Mono One', sans-serif;
+            font-size: 30;
+  position: relative;
+  display: inline-block;
+  font-size: 2em;
+  color: royalblue;
+  font-weight: 800;
+  overflow: hidden;
+  white-space: nowrap;
+}
+a::before {
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 30;
+  position: absolute;
+  content: attr(data-content);
+  top: 0;
+  left: 0;
+  width: 0;
+  color: midnightblue;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: width 275ms ease;
+  
+}
+a:hover::before {
+  width: 100%;
+}
+
+/* THIS IS FOR THE ANIMATED SCIENCE ICON */
+
+.SciWheelembed {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#atominside{
+	animation: wheel 1.7s linear infinite;
+	transform-origin: center;
+	transform-box: fill-box;
+	animation-play-state: paused;
+}
+
+
+#bubbles{
+	overflow: hidden;
+	animation:floatBubble 1s infinite alternate;
+	animation-play-state: paused;
+}
+
+svg:hover #atominside{
+	animation-play-state: running;
+}
+svg:hover #bubbles {
+	animation-play-state: running;
+}
+
+
+
+@keyframes wheel { 
+	from{
+		transform: rotateZ(0deg);
+	}
+	to{
+		transform: rotateZ(360deg)
+	}
+
+}
+
+
+  @keyframes floatBubble {
+	from {
+	  transform: translate3d(0, -3px, 0);
+	}
+	to {
+	  transform: translate3d(0, -37px, 0);
+	}
+  }
+
+  /* THIS IS FOR THE ANIMATED ART ICON */
+
+.Paintembed {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#brushart{
+	animation: wobble 1.7s ease infinite;
+	transform-origin: center;
+	transform-box: fill-box;
+	animation-play-state: paused;
+}
+/* ordered paints from right to left */
+#Vector_11{
+	overflow: hidden;
+	animation: color11 1s infinite alternate;
+	animation-play-state: paused;
+}
+
+#Vector_9{
+	overflow: hidden;
+	animation: color9 1s infinite alternate;
+	animation-play-state: paused;
+}
+#Vector_13{
+	overflow: hidden;
+	animation: color13 1s infinite alternate;
+	animation-play-state: paused;
+}
+#Vector_15{
+	overflow: hidden;
+	animation: color15 1s infinite alternate;
+	animation-play-state: paused;
+}
+
+
+svg:hover #brushart{
+	animation-play-state: running;
+}
+svg:hover #Vector_11 {
+	animation-play-state: running;
+}
+
+svg:hover #Vector_9 {
+	animation-play-state: running;
+}
+
+svg:hover #Vector_13 {
+	animation-play-state: running;
+}
+
+svg:hover #Vector_15 {
+	animation-play-state: running;
+}
+
+
+
+
+@keyframes wobble {
+    0%, 100% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+
+    15% {
+        -webkit-transform: translateX(-32px) rotate(-10deg);
+        transform: translateX(-32px) rotate(-10deg);
+    }
+
+    30% {
+        -webkit-transform: translateX(calc(32px / 2)) rotate(10deg);
+        transform: translateX(calc(32px / 2)) rotate(10deg);
+    }
+
+    45% {
+        -webkit-transform: translateX(calc(-32px / 2)) rotate(calc(-10deg / 1.8));
+        transform: translateX(calc(-32px / 2)) rotate(calc(-10deg / 1.8));
+    }
+
+    60% {
+        -webkit-transform: translateX(calc(32px / 3.3)) rotate(calc(10deg / 3));
+        transform: translateX(calc(32px / 3.3)) rotate(calc(10deg / 3));
+    }
+
+    75% {
+        -webkit-transform: translateX(calc(-32px / 5.5)) rotate(calc(-10deg / 5));
+        transform: translateX(calc(-32px / 5.5)) rotate(calc(-10deg / 5));
+    }
+}
+
+
+  @keyframes color11 {
+	from {
+	  fill:#00ff95
+	}
+	to {
+	  fill:#ff0037
+	}
+  }
+
+  @keyframes color11 {
+	from {
+	  fill:#00ff95
+	}
+	to {
+	  fill:#ff0037
+	}
+  }
+  @keyframes color9 {
+	from {
+	  fill:#1e14a1
+	}
+	to {
+	  fill:#ff8800e0
+	}
+  }
+  @keyframes color13 {
+	from {
+	  fill:#ff00006c
+	}
+	to {
+	  fill:#00eeff
+	}
+  }
+
+  @keyframes color15 {
+	from {
+	  fill:#88ff00
+	}
+	to {
+	  fill:#0026ff
+	}
+  }
+
+
+
+
+.funky{
+	width: 100%;
+	min-height: 1vh;
+	clear: both;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.funky .home_content{
+	display: flex;
+	align-items: center;
+}
+.funky .avatar{
+	min-width: 300px;
+	min-height: 300px;
+	position: relative;
+	border-radius: 100%; }
+
+.funky .avatar .image{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: cover;
+	animation: morph 8s ease-in-out infinite 1s;
+	background-blend-mode: multiply;
+	-webkit-box-shadow: inset 0px 0px 0px 9px rgba(255,255,255,.3);
+    -moz-box-shadow: inset 0px 0px 0px 9px rgba(255,255,255,.3);
+    box-shadow: inset 0px 0px 0px 9px rgba(255,255,255,.3);
+}
+
+@keyframes morph {
+	 0% {
+		 border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+	}
+	 50% {
+		 border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+	}
+	 100% {
+		 border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+	}
+}
+
+.funky .details{
+	margin-left: 0px;
+}
+
+.tokyo_tm_home .details{
+	margin-left: 80px;
+}
+.funky .details .name{
+	font-size: 55px;
+	font-weight: 800;
+	text-transform: uppercase;
+	margin-bottom: 14px;
+}
+.funky .details .job{
+	font-family: "Montserrat";
+	font-style: italic;
+	font-weight: 500;
+	max-width: 450px;
+	margin-bottom: 30px;
+}
+.funky .social{
+	width: 100%;
+	float: left;
+}
+.funky .social ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.funky .social ul li{
+	margin: 0px 8px 0px 0px;
+	display: inline-block;
+}
+.funky .social ul li:last-child{
+	margin-right: 0px;
+}
+.funky .social ul li a{
+	text-decoration: none;
+	color: #000;
+	font-size: 20px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.funky .social ul li a:hover{
+	color: #000;
+}
+
+
+@media (min-witdh: 900px) {
+body{
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+}
