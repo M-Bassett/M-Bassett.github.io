@@ -8,14 +8,70 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<!----replace the following with new fonts, dont forget to change in the css-->
 	<link href="https://fonts.googleapis.com/css2?family=Karla:wght@500&family=Montserrat:wght@400;700&family=Roboto&family=Rubik+Mono+One&family=Work+Sans:wght@500&display=swap" rel="stylesheet">
-	<style> @import url('https://fonts.googleapis.com/css2?family=Karla:wght@500&family=Roboto&family=Work+Sans:wght@500&display=swap'); </style>
-	<link href="index.css" rel="stylesheet" type="text/css">
+	<style> @import url('https://fonts.googleapis.com/css2?family=Karla:wght@500&family=Roboto&family=Work+Sans:wght@500&display=swap'); 
+    
+    .SciWheelembed {
+	color: transparent;
+	fill: none;
+}
+
+#atominside {
+	animation: wheel 1.7s linear infinite;
+	transform-origin: center;
+	transform-box: fill-box;
+	animation-play-state: paused;
+}
+
+
+#bubbles {
+	overflow: hidden;
+	animation: floatBubble 1s infinite alternate;
+	animation-play-state: paused;
+}
+
+svg:hover #atominside {
+	animation-play-state: running;
+}
+
+svg:hover #bubbles {
+	animation-play-state: running;
+}
+
+
+
+@keyframes wheel {
+	from {
+		transform: rotateZ(0deg);
+	}
+
+	to {
+		transform: rotateZ(360deg)
+	}
+
+}
+
+
+@keyframes floatBubble {
+	from {
+		transform: translate3d(0, -3px, 0);
+	}
+
+	to {
+		transform: translate3d(0, -37px, 0);
+	}
+}
+
+
+    
+    </style>
+	
     <title>SciCircle</title>
 </head>
 <body>
-    <a href="/index-sci.html" target="_top">
-    <svg width="312" height="212" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+   
+    <svg width="336" height="336" viewBox="-110 -30 706 606" style="background: none;" xmlns="http://www.w3.org/2000/svg">
         <g id="Science_Outline 1">
+        <a href="/index-sci.html" target="_top">
         <circle id="Ellipse 1" cx="203" cy="153" r="138" fill="#D9D9D9"/>
         <g id="#465_science_outline">
         <path id="Vector" d="M219.737 126.306V80.123H221.199C223.064 80.123 224.854 79.3819 226.173 78.0628C227.492 76.7437 228.233 74.9546 228.233 73.0891V72.2162C228.233 70.3506 227.492 68.5615 226.173 67.2424C224.854 65.9233 223.064 65.1822 221.199 65.1822H184.801C182.936 65.1822 181.146 65.9233 179.827 67.2424C178.508 68.5615 177.767 70.3506 177.767 72.2162V73.0891C177.767 74.9546 178.508 76.7437 179.827 78.0628C181.146 79.3819 182.936 80.123 184.801 80.123H186.263V126.306C172.619 130.332 160.883 139.14 153.205 151.115C145.526 163.091 142.42 177.431 144.454 191.511C146.488 205.59 153.527 218.465 164.281 227.777C175.035 237.089 188.785 242.214 203.01 242.214C217.236 242.214 230.985 237.089 241.739 227.777C252.493 218.465 259.532 205.59 261.566 191.511C263.601 177.431 260.494 163.091 252.816 151.115C245.137 139.14 233.401 130.332 219.758 126.306H219.737Z" fill="white"/>
