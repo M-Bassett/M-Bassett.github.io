@@ -1,0 +1,16 @@
+			<svg viewBox="0 0 500 500">
+				<path id="curve" d="M388 90 A 365 135 91 0 0 564 90" fill="transparent" stroke="transparent" />
+				<text width="500" class="textsci">
+					<textPath xlink:href="#curve">
+						Enter Science
+					</textPath>
+				</text>
+			</svg>
+			<svg viewBox="0 0 500 500">
+				<path id="curve" d=" M564 90 A 365 135 91 0 0 755 96" fill="transparent" stroke="transparent" />
+				<text width="500" class="textart">
+					<textPath xlink:href="#curve">
+						Enter Art
+					</textPath>
+				</text>
+			</svg>

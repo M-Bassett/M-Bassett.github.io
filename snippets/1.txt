@@ -1,0 +1,153 @@
+/* THIS IS FOR THE ANIMATED ART ICON */
+
+.Paintembed {
+	position: absolute;
+	top: 10%;
+	left: 76%;
+	z-index: 15;
+	color: transparent;
+	fill: none;
+}
+
+#brushart {
+	animation: wobble 1.7s ease infinite;
+	transform-origin: center;
+	transform-box: fill-box;
+	animation-play-state: paused;
+}
+
+/* ordered paints from right to left */
+#Vector_11 {
+	overflow: hidden;
+	animation: color11 1s infinite alternate;
+	animation-play-state: paused;
+}
+
+#Vector_9 {
+	overflow: hidden;
+	animation: color9 1s infinite alternate;
+	animation-play-state: paused;
+}
+
+#Vector_13 {
+	overflow: hidden;
+	animation: color13 1s infinite alternate;
+	animation-play-state: paused;
+}
+
+#Vector_15 {
+	overflow: hidden;
+	animation: color15 1s infinite alternate;
+	animation-play-state: paused;
+}
+
+
+svg:hover #brushart {
+	animation-play-state: running;
+}
+
+svg:hover #Vector_11 {
+	animation-play-state: running;
+}
+
+svg:hover #Vector_9 {
+	animation-play-state: running;
+}
+
+svg:hover #Vector_13 {
+	animation-play-state: running;
+}
+
+svg:hover #Vector_15 {
+	animation-play-state: running;
+}
+
+
+
+
+@keyframes wobble {
+
+	0%,
+	100% {
+		-webkit-transform: translateX(0%);
+		transform: translateX(0%);
+		-webkit-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		-webkit-transform: translateX(-32px) rotate(-10deg);
+		transform: translateX(-32px) rotate(-10deg);
+	}
+
+	30% {
+		-webkit-transform: translateX(calc(32px / 2)) rotate(10deg);
+		transform: translateX(calc(32px / 2)) rotate(10deg);
+	}
+
+	45% {
+		-webkit-transform: translateX(calc(-32px / 2)) rotate(calc(-10deg / 1.8));
+		transform: translateX(calc(-32px / 2)) rotate(calc(-10deg / 1.8));
+	}
+
+	60% {
+		-webkit-transform: translateX(calc(32px / 3.3)) rotate(calc(10deg / 3));
+		transform: translateX(calc(32px / 3.3)) rotate(calc(10deg / 3));
+	}
+
+	75% {
+		-webkit-transform: translateX(calc(-32px / 5.5)) rotate(calc(-10deg / 5));
+		transform: translateX(calc(-32px / 5.5)) rotate(calc(-10deg / 5));
+	}
+}
+
+
+@keyframes color11 {
+	from {
+		fill: #00ff95
+	}
+
+	to {
+		fill: #ff0037
+	}
+}
+
+@keyframes color11 {
+	from {
+		fill: #00ff95
+	}
+
+	to {
+		fill: #ff0037
+	}
+}
+
+@keyframes color9 {
+	from {
+		fill: #1e14a1
+	}
+
+	to {
+		fill: #ff8800e0
+	}
+}
+
+@keyframes color13 {
+	from {
+		fill: #ff00006c
+	}
+
+	to {
+		fill: #00eeff
+	}
+}
+
+@keyframes color15 {
+	from {
+		fill: #88ff00
+	}
+
+	to {
+		fill: #0026ff
+	}
+}
